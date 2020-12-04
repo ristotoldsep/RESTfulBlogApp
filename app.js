@@ -9,9 +9,11 @@ const express          = require("express"),
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
 
+const url = process.env.DATABASEURL || 'mongodb://localhost:27017/restful_blog_app';
 //APP CONFIG
 // mongoose.connect('mongodb://localhost:27017/restful_blog_app', { //connect to a mongoose DB (have to initialize name)
-mongoose.connect("mongodb+srv://risto:risto@blogapp.yzgin.mongodb.net/BlogApp?retryWrites=true&w=majority", {
+//mongoose.connect("mongodb+srv://risto:PW@blogapp.yzgin.mongodb.net/BlogApp?retryWrites=true&w=majority", {
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
