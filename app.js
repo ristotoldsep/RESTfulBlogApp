@@ -6,6 +6,9 @@ const express          = require("express"),
 	  expressSanitizer = require("express-sanitizer"),
 	  port 			   = process.env.PORT || 3000; 
 
+// assign mongoose promise library and connect to database
+mongoose.Promise = global.Promise;
+
 //APP CONFIG
 mongoose.connect('mongodb://localhost:27017/restful_blog_app', { //connect to a mongoose DB (have to initialize name)
   useNewUrlParser: true,
