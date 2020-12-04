@@ -11,7 +11,7 @@ mongoose.Promise = global.Promise;
 
 //APP CONFIG
 // mongoose.connect('mongodb://localhost:27017/restful_blog_app', { //connect to a mongoose DB (have to initialize name)
-mongoose.connect("mongodb+srv://blogapp.yzgin.mongodb.net/restful_blog_app", {
+mongoose.connect("mongodb+srv://risto:risto@blogapp.yzgin.mongodb.net/BlogApp?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
